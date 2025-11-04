@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Resep Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🥗🍔🍲Generator Resep Makanan🥗🍔🍲</h1>
+        <p>Silahkan masukkan informasi resep di form, nanti hasilnya muncul di bawah secara otomatis!</p>
+    </header>
+
+    <main>
+        <form id="recipe-form">
+                <legend>Isi Data Resep</legend>
+
+                <label for="recipe-name">Nama Resep:</label><br>
+                <input type="text" id="recipe-name" placeholder="Contoh: Rendang Padang"><br><br>
+
+                <label for="prep-time">Waktu Persiapan (menit):</label><br>
+                <input type="number" id="prep-time" placeholder="Misal: 45"><br><br>
+
+                <label for="difficulty">Tingkat Kesulitan (1-5):</label><br>
+                <input type="range" id="difficulty" min="1" max="5"><br><br>
+
+                <label for="recipe-category">Kategori:</label><br>
+                <input list="kategori" id="recipe-category" placeholder="Pilih kategori"><br>
+                <datalist id="kategori">
+                    <option value="Makanan Utama">
+                    <option value="Makanan Penutup">
+                    <option value="Makanan Pembuka">
+                    <option value="Minuman">
+                </datalist><br>
+
+                <label for="recipe-desc">Deskripsi Resep:</label><br>
+                <textarea id="recipe-desc" rows="3" placeholder="Ceritakan sedikit tentang resep ini..."></textarea><br>
+        </form>
+
+        <article id="preview-area">
+            <h2 id="preview-name">Nama Resep Akan Muncul Di Sini</h2>
+            <p id="preview-category">Kategori: -</p>
+            <p id="preview-time">Waktu Persiapan: - menit</p>
+            <p id="preview-difficulty">Tingkat Kesulitan: -</p>
+            <img src="resep masakan sehari-hari untuk 1 minggu.jpg" alt="Gambar Resep" id="preview-img">
+            <p id="preview-desc">Deskripsi resep akan muncul di sini...</p>
+
+            <section id="preview-video">
+                <h3>🎥 Video Panduan Masak</h3>
+                <video controls width="100%">
+                    <source src="Video Rendang.mp4" type="video/mp4">
+                    <track src="subtitles.vtt" kind="subtitles" srclang="id" label="Bahasa Indonesia">
+                    Browser kamu tidak mendukung video HTML5.
+                </video>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 UTS Desain Web(A) | Resep Generator oleh Muhammad Fathir Alfarqi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
